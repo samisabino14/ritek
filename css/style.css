@@ -1,0 +1,286 @@
+/*
+font-family: 'Kablammo', cursive;
+font-family: 'Permanent Marker', cursive;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: white;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navlist {
+
+    display: flex;
+}
+
+.navlist a {
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .55s ease-in-out;
+
+}
+
+.navlist a:hover {
+    border-bottom: 5px solid #eee;
+}
+
+#menu-icon {
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    padding: 0 18%;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    /*background: linear-gradient(245.59deg, #e0dede 0%, #e7e2e2 28.53%, #b3b0b0 75.52%);*/
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.content-text h1 {
+    font-size: 90px;
+    font-family: 'Permanent Marker', cursive;
+    margin: 0 0 45px;  
+}
+
+.content-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 40px;    
+}
+
+
+.content-text p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.content-img {
+    width: 300px;
+    height: auto;
+
+}
+
+.content-text a {
+    display: inline-block;
+    background: linear-gradient(245.59deg, #3b254d 0%, #0b8abd 28.53%, #5d05a5 75.52%);
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    color: white;
+    border-radius: 5px;
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    transition: all .5s ease-in-out;
+}
+
+.content-text a:hover {
+    background: white;
+    color: #0b8abd;
+    border: 1px solid #0b8abd;
+    transform: translate(8px, 8px);
+}
+
+.icons {
+    position: fixed;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 26px;
+    transition: all .55s ease;    
+}
+
+.icons i:hover {
+    color: gray;
+    transform: translateY(-5px);
+
+}
+
+.scroll-up {
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+}
+
+.scroll-up i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    background: #0b8abd;
+    border-radius: 30px;
+    color: white;
+    transition: all .55s ease;    
+}
+
+.up i:hover {
+    transform: translateY(-5px);
+}
+
+
+footer {
+    background: #eee;
+    color: black;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 1535px) {
+
+    header {
+        padding: 15px 3%;
+        transition: .2s;        
+    }
+
+    .icons {
+        padding: 0 3%;
+        transition: .2s;        
+    }
+
+    .scroll-up {
+        right: 3%;
+        transition: .2s;     
+    }
+}
+
+@media (max-width: 1460px) {
+
+    section {
+        padding: 0 12%;
+    }
+}
+
+@media (max-width: 1340px) {
+
+        
+    .content-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content-text h5 {
+        margin-bottom: 25px;
+    }
+
+    .content-text h1 {
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+}
+
+@media (max-width: 1195px) {
+
+    
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .content {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .content-text {
+        padding-top: 115px;
+    }
+
+    .content-img {
+        text-align: center;        
+    }
+
+    .content-img img {
+        width: 560px;
+        height: auto;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .scroll-up {
+        display: none;
+    }
+
+}
+
+@media (max-width: 990px) {
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all 0.55s ease;
+    }
+
+    .navlist a {
+        margin: 7px 0;
+        display: block;
+        margin-left: 0;
+    }
+
+    .navlist.open{
+        right: 0;
+    }
+}
+
+@media (max-width: 990px) {
+
+    .content-img img {
+        width: 100%;
+        height: auto;
+    }
+}
