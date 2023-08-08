@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +14,7 @@ a {
 }
 
 header {
-    position: fixed;
+    position: sticky;
     right: 0;
     top: 0;
     z-index: 1000;
@@ -32,6 +31,11 @@ header {
     font-weight: 700;
 }
 
+/*____________________________________________
+
+    INDEX.html
+______________________________________________*/
+
 .navlist {
 
     display: flex;
@@ -46,6 +50,27 @@ header {
 }
 
 .navlist a:hover {
+    border-bottom: 5px solid #eee;
+}
+
+/*____________________________________________
+
+    SERVICE.html
+______________________________________________*/
+
+.navlistService {
+
+    display: flex;
+}
+
+.navlistService a {
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .55s ease-in-out;
+}
+
+.navlistService a:hover {
     border-bottom: 5px solid #eee;
 }
 
@@ -65,12 +90,10 @@ header {
 
 .carousel-inner .carousel-item img {
 
-    width: 100%; 
-    height: 93vh;
-}
-
-section {
-    padding: 0 18%;
+    width: 100%;
+    height: 90vh;
+    resize: horizontal;
+    
 }
 
 .content {
@@ -88,13 +111,13 @@ section {
 .content-text h1 {
     font-size: 90px;
     font-family: 'Permanent Marker', cursive;
-    margin: 0 0 45px;  
+    margin: 0 0 45px;
 }
 
 .content-text h5 {
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: 40px;    
+    margin-bottom: 40px;
 }
 
 
@@ -142,7 +165,7 @@ section {
     display: block;
     margin: 26px 0;
     font-size: 26px;
-    transition: all .55s ease;    
+    transition: all .55s ease;
 }
 
 .icons i:hover {
@@ -163,7 +186,7 @@ section {
     font-size: 35px;
     border-radius: 34px;
     color: #551A8B;
-    transition: all .55s ease;    
+    transition: all .55s ease;
 }
 
 .scroll-up i:hover {
@@ -190,7 +213,7 @@ section {
 
     background: #551A8B;
     color: #fff;
-    border: none;   
+    border: none;
     transform: translateY(-30px);
     cursor: pointer;
 
@@ -216,7 +239,7 @@ section {
 
     background: #ffffff;
     color: #551A8B;
-    border: 1px solid #551A8B;   
+    border: 1px solid #551A8B;
 
 }
 
@@ -226,21 +249,12 @@ section {
     color: #551A8B;
 }
 
-#services {
-
-
-}
 
 #services p {
 
     font-size: 14px;
     text-align: center;
     margin: 2rem;
-}
-
-#services img {
-    
-
 }
 
 .item_service {
@@ -266,17 +280,17 @@ footer {
 
     header {
         padding: 15px 3%;
-        transition: .2s;        
+        transition: .2s;
     }
 
     .icons {
         padding: 0 3%;
-        transition: .2s;        
+        transition: .2s;
     }
 
     .scroll-up {
         right: 3%;
-        transition: .2s;     
+        transition: .2s;
     }
 }
 
@@ -289,7 +303,7 @@ footer {
 
 @media (max-width: 1340px) {
 
-        
+
     .content-img img {
         width: 100%;
         height: auto;
@@ -307,7 +321,7 @@ footer {
 
 @media (max-width: 1195px) {
 
-    
+
     section {
         padding: 0 3%;
         transition: .2s;
@@ -324,7 +338,7 @@ footer {
     }
 
     .content-img {
-        text-align: center;        
+        text-align: center;
     }
 
     .content-img img {
@@ -354,6 +368,11 @@ footer {
         display: block;
     }
 
+    /*____________________________________________
+
+        INDEX.html
+    ______________________________________________*/
+
     .navlist {
         position: absolute;
         top: 100%;
@@ -376,9 +395,41 @@ footer {
 
     }
 
-    .navlist.open{
+    .navlist.open {
         right: 0;
     }
+
+    /*____________________________________________
+
+        SERVICE.html
+    ______________________________________________*/
+
+    .navlistService {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all 0.55s ease;
+    }
+
+    .navlistService a {
+        margin: 7px 0;
+        display: block;
+        margin-left: 0;
+        color: #551A8B;
+
+    }
+
+    .navlistService.open {
+        right: 0;
+    }
+
     .content-img img {
         width: 100%;
         height: auto;
