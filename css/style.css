@@ -93,7 +93,7 @@ ______________________________________________*/
     width: 100%;
     height: 90vh;
     resize: horizontal;
-    
+
 }
 
 .content {
@@ -266,14 +266,64 @@ ______________________________________________*/
     margin: 0 1rem;
 }
 
+.portgroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portgroup div {
+    width: 100%;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portgroup img {
+
+    width: 50%;
+}
+
+.portgroup p {
+
+    margin-top: 10px;
+    font-size: small;
+
+}
 
 footer {
-    background: #eee;
-    color: black;
-    height: 20vh;
+    background: #551A8B;
+    padding: 40px 0 0 0;
+    margin-top: 6rem;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    color: white;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+}
+
+footer div .item {
+
+    display: block;
+}
+
+footer div .item div {
+    display: block;
+
+}
+
+footer div .item > h5 {
+
+    margin-bottom: 50px;
+}
+
+footer div .item p {
+
+    font-size: small;
+
 }
 
 @media (max-width: 1535px) {
@@ -457,5 +507,27 @@ footer {
 
     #services p {
         font-size: 10px;
+    }
+
+    .portgroup {
+
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portgroup div {
+        margin: 50px 0;
+
+    }
+
+    footer div {
+        display: block;
+        gap: 8;
+    }
+
+    footer div .item {
+
+        margin-bottom: 30px;
     }
 }
